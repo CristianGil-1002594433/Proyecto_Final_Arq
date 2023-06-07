@@ -74,11 +74,6 @@ public class main extends javax.swing.JFrame {
 
     public void captacion3(String dir, String dir2, int ciclo) throws InterruptedException {
 
-        //pc > dir1>mar     (dir a registros)
-        //jTFpc.setText("");
-        //jTFmar.setText(dir);
-        //TimeUnit.SECONDS.sleep(3);
-        //Thread.sleep(2000);
         if (ciclo == 1) {
             jTFpc.setText("");
             jTFmar.setText(dir);
@@ -92,13 +87,13 @@ public class main extends javax.swing.JFrame {
     public void captacion4(String dir, String dir2, int ciclo) throws InterruptedException {
 
         if (ciclo == 1) {
-            JTARegistros.append(dir);
+            JTARegistros.append(dir +"\n");
             jTFmar.setText("");
             jTFbIntr.setText(dir);
         }
         if (ciclo == 2) {
             jTFac.setText(dir);
-            JTARegistros.append(dir2);
+            JTARegistros.append(dir2+"\n");
             jTFmar.setText("");
             jTFbIntr.setText(dir2);
             //jTFbIntr.setText(dir2);
@@ -178,11 +173,11 @@ public class main extends javax.swing.JFrame {
         if (ciclo == 1) {
             jTFmbr.setText("");
             jTFir.setText(dir);
-            jTFmemoria.setText(JTARegistros.getText());
+            jTFmemoria.setText(JTARegistros.getText()+"\n");
         }
         if (ciclo == 2) {
             jTFmbr.setText("");
-            jTFmemoria.setText(JTARegistros.getText());
+            jTFmemoria.setText(JTARegistros.getText()+"\n");
             jTFir.setText(dir2);
         }
     }
@@ -764,15 +759,17 @@ public class main extends javax.swing.JFrame {
             + "0001 - clear\n"
             + "0010 - set\n"
             + "0011 - store	\n"
-            + " -- aritméticas:\n"
-            + "/n"
+            + "\n"
+            + " -- Aritméticas:\n"
+            + "\n"
             + "0100 - add\n"
             + "0101 - sub\n"
             + "0110 - mpy\n"
             + "0111 - div\n"
             + "1000 - negate\n"
-            + "/n"
-            + "--lógicas:\n"
+            + "\n"
+            + "-- Lógicas:\n"
+            + "\n"
             + "1001 - and\n"
             + "1010 - or\n"
             + "1011 - not\n"
